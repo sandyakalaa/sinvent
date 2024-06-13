@@ -45,7 +45,7 @@ class KategoriController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Kategori $kategori)
+    public function show(string $id)
     {
         $kategori = Kategori::find($id);
         
@@ -60,7 +60,7 @@ class KategoriController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Kategori $kategori)
+    public function update(Request $request, string $id)
     {
         $kategori = Kategori::find($id);
 
@@ -84,7 +84,7 @@ class KategoriController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kategori $kategori)
+    public function destroy(string $id)
     {
         $kategori = Kategori::find($id);
 
