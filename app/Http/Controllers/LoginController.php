@@ -24,7 +24,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('barang');
         }
 
         return back()->withErrors([
@@ -34,17 +34,15 @@ class LoginController extends Controller
     }
 
     public function logout(Request $request): RedirectResponse
-    // public function logout()
-        {
-            // return view('login');
+    {
 
-        Auth::logout();
+    Auth::logout();
 
-        $request->session()->invalidate();
+    $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+    $request->session()->regenerateToken();
 
-        return redirect('/login');
+    return redirect('/login');
     }
 
     // public function forgot_password() {

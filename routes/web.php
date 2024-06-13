@@ -20,7 +20,7 @@ Route::resource('barangmasuk', BarangMasukController::class)->middleware('auth')
 Route::resource('barangkeluar', BarangKeluarController::class)->middleware('auth');
 
 //route login
-Route::get('login', [LoginController::class,'index'])->name('login')->middleware('guest');
+Route::get('login', [LoginController::class,'index'])->name('login')->middleware('auth');
 Route::post('login', [LoginController::class,'authenticate']);
 
 //route logout
