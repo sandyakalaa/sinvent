@@ -403,7 +403,7 @@
                 <div class="modal-body">Pilih "Logout" di bawah ini jika Anda ingin keluar</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
-                    <a class="btn btn-primary" href="{{route ('login')}}">Logout</a>
+                    <a class="btn btn-primary" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
